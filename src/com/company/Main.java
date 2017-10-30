@@ -13,8 +13,7 @@ public class Main {
         player.hurt(20); //нанесено урон 20
         player.hurt(30); //нанесено урон 30
         player.hurt(20); //нанесено урон 20
-        player.PrintPulse();//печатаем пульс
-        System.out.println("User level: "+player.getLevel());
+        player.printState();//печатаем пульс
 
         //сохраняем состояние
         gameTools.save(player);
@@ -22,13 +21,11 @@ public class Main {
 
         player.cure(30); //принимем лекарство
         player.setLevel(12);
-        player.PrintPulse();//печатаем пульс
-        System.out.println("User level: "+player.getLevel());
+        player.printState();//печатаем пульс
 
         //восстанавливаем состояние
         gameTools.load(player);
 
-        player.PrintPulse(); //печатаем пульс
-        System.out.println("User level: "+player.getLevel());
+        player.printState(); //печатаем пульс
     }
 }

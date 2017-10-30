@@ -47,19 +47,24 @@ public class Player implements Originator {
 
     public void setLevel(int level) {
         this.level = level;
+        System.out.println("Player jump to "+level+" level");
     }
 
 
-    public void PrintPulse()
+    public void printState()
     {
+
+        String pulse=null;
         if(this.health> 70)
-            System.out.println("Pulse: green");
+            pulse = "green";
 
         if(this.health<= 70 && this.health> 40)
-            System.out.println("Pulse: yellow");
+            pulse = "yellow";
 
         if (this.health <= 40)
-            System.out.println("Pulse: red");
+            pulse = "red";
+
+        System.out.println(String.format("State: Level[%d] Health[%d] Pulse[%s]",level,health,pulse));
     }
 
     @Override
